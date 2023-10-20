@@ -1,0 +1,664 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1D1D1D;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*Container
+=======================*/
+.container {
+    width: 100%;
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 0 81px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 8px;
+    }
+}
+
+
+/*Header
+=========================================*/
+
+/*Фон*/
+.header {
+    height: 72px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/*Позиционирование*/
+.header__wrapper {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Позиционирование правой части*/
+.header__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 125px;
+}
+
+@media (max-width: 320px) {
+    .header__right {
+        width: 78px;
+    }
+}
+
+.header__button {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    color: #1D1D1D;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    width: 78px;
+    height: 40px;
+    border: 2px solid #E0E0E0;
+    border-radius: 2px;
+    transition: background-color .2s linear;
+    cursor: pointer;
+}
+.header__button:hover {
+    background-color: #f3f3f3;
+}
+
+.basket {
+    height: 22px;
+    transition: transform .2s linear;
+}
+
+.basket:hover {
+    transform: scale(1.05, 1.05);
+}
+
+@media (max-width: 320px) {
+    .basket {
+        display: none;
+    }
+}
+
+
+/*Форма поиска
+=====================*/
+.main__search {
+    padding-top: 128px;
+    padding-bottom: 56px;
+}
+
+.search {
+    font-size: 16px;
+    color: #626262;
+    line-height: 1.5;
+    width: 100%;
+    border: none;
+    outline-style: none;
+    border-bottom: 1px solid hsl(0, 0%, 70%);
+}
+
+:focus::placeholder {
+  color: transparent;
+}
+
+.main__title {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/*Card
+========================*/
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col {
+    margin-bottom: 40px;
+    transition: background-color 0.2s linear;
+}
+
+.col:hover {
+    background-color: #f7f7f7;
+}
+
+.card {
+    text-decoration: none;
+    color: #1D1D1D;
+}
+
+.card__img {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.card__pick {
+    max-width: 100%;
+    border-radius: 3px;
+    transition: transform 0.2s linear;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card__pick:hover {
+    transform: scale(1.03, 1.03);
+}
+
+.card__name {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+
+.card__type {
+    font-size: 14px;
+    color: #626262;
+    line-height: 1.5;
+    padding-bottom: 3px;
+}
+
+.card__time {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/*Footer
+===========================*/
+.footer {
+    height: auto;
+    background-color: #000;
+    color: #fff;
+}
+
+/*Footer-1*/
+.footer__header {
+    width: 192px;
+    min-height: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    display: block;
+    max-height: 20px;
+}
+
+.footer__hr {
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid hsl(0, 0%, 46%, .5);
+}
+
+/*Footer-2*/
+.footer__nav {
+    width: 100%;
+    min-height: 221px;
+    padding: 32px 0 0;
+}
+
+.footer__nav > div {
+    margin: 0;
+}
+
+/*Правый столбик*/
+.footer__langs {
+    background-color: #3B3B3B;
+    padding: 0 3px;
+    margin-bottom: 35px;
+    max-width: 227px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Шарик*/
+.shape {
+    height: 16px;
+}
+
+/*Языки*/
+#langs {
+    height: 40px;
+    min-width: 173px;
+    cursor: pointer;
+    color: inherit;
+    border: none;
+    background-color: #3B3B3B;
+    outline: none;
+}
+
+/*Ссылки*/
+.footer__aside {
+    width: 92px;
+    height: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+}
+
+.footer__title {
+    text-decoration: none;
+    font-size: 16px;
+    color: inherit;
+}
+
+.footer__title:hover {
+    color: #626262;
+}
+
+.footer__lattice {
+    color: #49A144;
+    padding-right: 3px;
+}
+
+.footer__links {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer__links > a > img {
+    width: 24px;
+    transition: transform 0.2s;
+}
+
+.footer__links > a > img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+
+/*Средний и правый столбик*/
+.footer__menu > a {
+    text-decoration: none;
+    line-height: 1.25;
+    color: #fff;
+    display: block;
+    padding: 10px 0;
+}
+
+.footer__menu > a:hover {
+    color: #777777;
+}
+
+/*Footer-3*/
+.footer_3 {
+    width: 296px;
+    min-height: 121px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_3 > a > img {
+    height: 40px;
+}
+
+/*Footer-4*/
+.footer_4 {
+    min-height: 94px;
+    padding: 40px 10px 6px;
+    font-size: 11px;
+}
+
+.footer_4 div {
+    padding-bottom: 34px;
+}
+
+.footer_4 div a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer_4 div a:hover {
+    color: #626262;
+}
+
+/*Зеленый scroller
+================================*/
+.scroller {
+    width: 84px;
+    height: 84px;
+    background-color: #49A144;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroller:hover {
+    background-color: #30932a;
+}
+
+@media (max-width: 320px) {
+    .scroller {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+/*Restaurant
+=======================*/
+.banner {
+    background-image: url(image/restaurant/Rest_1_fon.png);
+    background-size: cover;
+    background-color: #ffe0c5;
+    background-position: center;
+    height: 364px;
+    width: 100%;
+    /*Корректировать положение фона*/
+    margin-top: 72px;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:320px) {
+    .banner {
+        align-items: flex-end;
+        height: 255px;
+    }
+}
+
+/*Белый блок*/
+.banner__block {
+    background-color: #fff;
+    border-radius: 2px;
+    margin: 0;
+    padding: 35px 0;
+    max-height: 204px;
+    max-width: 432px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width:480px) {
+    .banner__block {
+        padding: 25px 0 24px;
+        height: 180px;
+        position: relative;
+        top: 150px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .banner__block {
+        padding: 25px 0 24px;
+        height: 180px;
+        position: relative;
+        top: 50px;
+    }
+}
+
+/*Верхний текст*/
+.banner__title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.16;
+    font-weight: 500;
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width:350px) {
+    .banner__title {
+        font-size: 24px;
+        line-height: 1.16;
+        padding-bottom: 40px;
+    }
+}
+
+/*Нижний текст*/
+.banner__info {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+@media screen and (max-width:320px) {
+    .banner__info {
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+.banner__type {
+    font-size: 14px;
+    color: #626262;
+}
+
+@media screen and (max-width:320px) {
+    .banner__type {
+        padding-bottom: 15px;
+    }
+}
+
+.banner__time {
+    width: 100px;
+    height: 32px;
+    background-color: #262626;
+    border-color: #1D1D1D;
+    border-radius: 16px;
+    color: #fff;
+    text-align: center;
+    padding-top: 9px;
+}
+
+/*Menu
+====================*/
+.menu {
+    min-height: 80px;
+    border: none;
+    border-bottom: 1px solid hsl(0, 0%, 46%, .4);
+    padding: 30px 0;
+}
+
+@media screen and (max-width:480px) {
+    .menu {
+        height: 0;
+        padding: 15px 0;
+        border-bottom: none;
+    }
+}
+
+/*Список меню*/
+.menu__nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #626262;
+}
+
+@media screen and (max-width:480px) {
+    .menu__link {
+        display: none;
+    }
+}
+
+.menu__link:hover {
+    color: #202020;
+}
+
+.menu__link:focus {
+    color: #327430;
+}
+
+
+/*Списк блюд*/
+
+.food__title {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 500;
+    height: 122px;
+    padding: 58px 0 30px;
+}
+
+@media screen and (max-width:480px) {
+    .food__title {
+        text-align: center;
+        padding: 85px 0 10px;
+    }
+}
+
+.hr {
+    width: 50px;
+    margin-bottom: 30px;
+    display: none;
+}
+
+@media screen and (max-width:480px) {
+    .hr {
+        display: block;
+    }
+}
+
+
+/*Список блюд*/
+.food {
+    margin-bottom: 40px;
+}
+
+.food__card {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:320px) {
+    .food__card {
+        margin-bottom: 12px;
+    }
+}
+
+.food__backgr {
+    border: 2px solid rgba(117, 117, 117, .2);
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:320px) {
+    .food__backgr {
+        border: none;
+        border-bottom: 2px solid rgba(117, 117, 117, .2);
+    }
+}
+
+.food__backgr:hover {
+    background-color: rgba(117, 117, 117, .04)
+}
+
+
+/*Описание блюд*/
+.food__description {
+    padding: 20px 10px 20px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:320px) {
+    .food__description {
+        padding: 10px 0;
+    }
+}
+
+.food__name {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 320px) {
+    .food__name {
+        font-size: 14px;
+        width: 188px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+
+.food__text {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #626262;
+}
+
+.food__price {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.food__img {
+    max-height: 160px;
+    float: right;
+}
+
+@media screen and (max-width: 500px) {
+    .food__img {
+        max-height: 102px;
+        max-width: 102px;
+    }
+}
+
+
+
+
+
+
+
+
